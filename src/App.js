@@ -9,7 +9,7 @@ const CO = {
   F: "Flexera",
   S: "Smarsh",
   C: "Capillary",
-  L: "Lower-Tier", // Sony, Edgeverve, Wakefit, etc.
+  L: "⭑", // Sony, Edgeverve, Wakefit, etc.
 };
 
 const CO_CLR = {
@@ -522,7 +522,7 @@ export default function DSATracker() {
                 🎯 DSA Master Checklist
               </div>
               <div style={{ fontSize: 11, color: "#64748b", marginTop: 2 }}>
-                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera · Smarsh · Capillary · Lower-Tier
+                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera · Smarsh · Capillary · ⭑
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
