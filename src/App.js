@@ -7,7 +7,11 @@ const CO = {
   D: "Dell",
   T: "Thomson Reuters",
   F: "Flexera",
+  S: "Smarsh",
+  C: "Capillary",
+  L: "Lower-Tier", // Sony, Edgeverve, Wakefit, etc.
 };
+
 const CO_CLR = {
   O: { background: "#fee2e2", color: "#dc2626" },
   I: { background: "#dbeafe", color: "#1d4ed8" },
@@ -15,13 +19,18 @@ const CO_CLR = {
   D: { background: "#e0f2fe", color: "#0369a1" },
   T: { background: "#ffedd5", color: "#c2410c" },
   F: { background: "#d1fae5", color: "#065f46" },
+  S: { background: "#ccfbf1", color: "#0f766e" }, // Teal
+  C: { background: "#fbcfe8", color: "#be185d" }, // Pink
+  L: { background: "#fef08a", color: "#854d0e" }, // Yellow
 };
+
 const PRI_CLR = {
   CRITICAL: { background: "#fef2f2", color: "#dc2626" },
   HIGH: { background: "#fff7ed", color: "#ea580c" },
   MEDIUM: { background: "#eff6ff", color: "#2563eb" },
   LOW: { background: "#f8fafc", color: "#64748b" },
 };
+
 const DIFF = {
   E: { background: "#dcfce7", color: "#15803d", label: "Easy" },
   M: { background: "#fef9c3", color: "#92400e", label: "Med" },
@@ -34,7 +43,7 @@ const CATS = [
     l: "Arrays",
     e: "🔢",
     p: "CRITICAL",
-    n: "Tested by ALL 6 companies — core of every OA round",
+    n: "Tested by ALL companies — core of every OA round",
   },
   {
     id: "strings",
@@ -90,7 +99,7 @@ const CATS = [
     l: "Trees — BT & BST",
     e: "🌳",
     p: "CRITICAL",
-    n: "BFS + DFS traversals — most asked category across all 6 companies",
+    n: "BFS + DFS traversals — most asked category across companies",
   },
   {
     id: "graphs",
@@ -98,6 +107,20 @@ const CATS = [
     e: "🕸️",
     p: "MEDIUM",
     n: "Grid = disguised graph — know BFS/DFS templates cold",
+  },
+  {
+    id: "trie",
+    l: "Trie (Prefix Tree)",
+    e: "🌲",
+    p: "MEDIUM",
+    n: "Crucial for string matching and autocomplete systems",
+  },
+  {
+    id: "uf",
+    l: "Union-Find (Disjoint Set)",
+    e: "🤝",
+    p: "HIGH",
+    n: "Essential for connected components and cycle detection",
   },
   {
     id: "dp",
@@ -154,12 +177,7 @@ const CATS = [
 const P = {
   arrays: [
     ["Two Sum", 1, "E", ["O", "I", "A", "D", "T", "F"]],
-    [
-      "Best Time to Buy and Sell Stock",
-      121,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Best Time to Buy and Sell Stock", 121, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Contains Duplicate", 217, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Maximum Subarray", 53, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Product of Array Except Self", 238, "M", ["O", "A", "D", "T"]],
@@ -188,21 +206,11 @@ const P = {
     ["Valid Anagram", 242, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Valid Palindrome", 125, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Longest Common Prefix", 14, "E", ["O", "I", "A", "D", "T", "F"]],
-    [
-      "Longest Substring Without Repeating Characters",
-      3,
-      "M",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Longest Substring Without Repeating Characters", 3, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Longest Palindromic Substring", 5, "M", ["O", "D", "T"]],
     ["String to Integer Atoi", 8, "M", ["I", "A"]],
     ["Reverse Words in a String", 151, "M", ["O", "I", "A", "D", "T", "F"]],
-    [
-      "First Unique Character in a String",
-      387,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["First Unique Character in a String", 387, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Group Anagrams", 49, "M", ["O", "D", "T"]],
     ["Find All Anagrams in a String", 438, "M", ["O", "D"]],
     ["Permutation in String", 567, "M", ["O", "D", "T"]],
@@ -215,14 +223,14 @@ const P = {
     ["Roman to Integer", 13, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Integer to Roman", 12, "M", ["O", "D"]],
     ["Count and Say", 38, "M", ["I", "F"]],
+    ["Find Index of First Occurrence", 28, "E", ["S", "L"]],
+    ["Repeated Substring Pattern", 459, "E", ["L"]],
+    ["Rotate String", 796, "E", ["L"]],
+    ["String Compression", 443, "M", ["S", "C", "L"]],
+    ["Minimum Steps to Make Anagram", 1347, "M", ["S"]],
   ],
   hashmap: [
-    [
-      "Two Sum II Input Array Is Sorted",
-      167,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Two Sum II Input Array Is Sorted", 167, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Top K Frequent Elements", 347, "M", ["O", "D", "T"]],
     ["Longest Consecutive Sequence", 128, "M", ["O", "A", "D"]],
     ["Valid Sudoku", 36, "M", ["O"]],
@@ -234,12 +242,7 @@ const P = {
     ["Find the Difference", 389, "E", ["I"]],
   ],
   twoptr: [
-    [
-      "Remove Duplicates from Sorted Array",
-      26,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Remove Duplicates from Sorted Array", 26, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Remove Element", 27, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Merge Sorted Array", 88, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Squares of a Sorted Array", 977, "E", ["I", "A"]],
@@ -248,27 +251,12 @@ const P = {
     ["3Sum Closest", 16, "M", ["O", "D"]],
     ["4Sum", 18, "M", ["O", "D"]],
     ["Trapping Rain Water", 42, "H", ["O", "A", "D"]],
-    [
-      "Partition Array Positive Negative Separation",
-      0,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Partition Array Positive Negative Separation", 0, "E", ["O", "I", "A", "D", "T", "F"]],
   ],
   sliding: [
     ["Maximum Average Subarray I", 643, "E", ["O", "I", "A", "D", "T", "F"]],
-    [
-      "Longest Substring Without Repeating Characters",
-      3,
-      "M",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
-    [
-      "Longest Substring with At Most K Distinct Characters",
-      340,
-      "M",
-      ["O", "D"],
-    ],
+    ["Longest Substring Without Repeating Characters", 3, "M", ["O", "I", "A", "D", "T", "F"]],
+    ["Longest Substring with At Most K Distinct Characters", 340, "M", ["O", "D"]],
     ["Fruit Into Baskets", 904, "M", ["O"]],
     ["Sliding Window Maximum", 239, "H", ["O", "D"]],
     ["Max Consecutive Ones III", 1004, "M", ["O", "D"]],
@@ -283,12 +271,7 @@ const P = {
     ["Linked List Cycle", 141, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Linked List Cycle II", 142, "M", ["O", "D"]],
     ["Middle of the Linked List", 876, "E", ["O", "I", "A", "D", "T", "F"]],
-    [
-      "Remove Nth Node From End of List",
-      19,
-      "M",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Remove Nth Node From End of List", 19, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Palindrome Linked List", 234, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Intersection of Two Linked Lists", 160, "E", ["O", "I"]],
     ["Add Two Numbers", 2, "M", ["O", "D", "T"]],
@@ -339,46 +322,25 @@ const P = {
     ["Diameter of Binary Tree", 543, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Sum of Left Leaves", 404, "E", ["I", "A"]],
     ["Binary Tree Inorder Traversal", 94, "E", ["O", "I", "A", "D", "T", "F"]],
-    [
-      "Binary Tree Preorder Traversal",
-      144,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
-    [
-      "Binary Tree Postorder Traversal",
-      145,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
-    [
-      "Binary Tree Level Order Traversal",
-      102,
-      "M",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Binary Tree Preorder Traversal", 144, "E", ["O", "I", "A", "D", "T", "F"]],
+    ["Binary Tree Postorder Traversal", 145, "E", ["O", "I", "A", "D", "T", "F"]],
+    ["Binary Tree Level Order Traversal", 102, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Binary Tree Zigzag Level Order Traversal", 103, "M", ["O", "D"]],
     ["Binary Tree Right Side View", 199, "M", ["O", "A", "D"]],
-    [
-      "Lowest Common Ancestor of a Binary Search Tree",
-      235,
-      "M",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Lowest Common Ancestor of a Binary Search Tree", 235, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Lowest Common Ancestor of a Binary Tree", 236, "M", ["O", "D"]],
     ["Validate Binary Search Tree", 98, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Kth Smallest Element in a BST", 230, "M", ["O", "D", "T"]],
     ["Flatten Binary Tree to Linked List", 114, "M", ["O", "D"]],
     ["Path Sum II", 113, "M", ["O", "D"]],
     ["Maximum Width of Binary Tree", 662, "M", ["O", "D"]],
-    [
-      "Construct Binary Tree from Preorder and Inorder Traversal",
-      105,
-      "M",
-      ["O", "D"],
-    ],
+    ["Construct Binary Tree from Preorder and Inorder Traversal", 105, "M", ["O", "D"]],
     ["Delete Node in a BST", 450, "M", ["O", "D"]],
     ["Binary Tree Maximum Path Sum", 124, "H", ["O"]],
+    ["Convert Sorted Array to BST", 108, "E", ["L"]],
+    ["Populating Next Right Pointers", 116, "M", ["S", "L"]],
+    ["Count Complete Tree Nodes", 222, "M", ["L"]],
+    ["Trim a BST", 669, "M", ["S"]],
   ],
   graphs: [
     ["Number of Islands", 200, "M", ["O", "A", "D", "T"]],
@@ -391,13 +353,19 @@ const P = {
     ["Course Schedule II", 210, "M", ["O"]],
     ["Pacific Atlantic Water Flow", 417, "M", ["O", "D"]],
     ["Surrounded Regions", 130, "M", ["O", "D"]],
-    [
-      "Number of Connected Components in an Undirected Graph",
-      323,
-      "M",
-      ["O", "D"],
-    ],
+    ["Number of Connected Components", 323, "M", ["O", "D"]],
     ["Keys and Rooms", 841, "M", ["I", "D"]],
+    ["Network Delay Time", 743, "M", ["S"]],
+  ],
+  trie: [
+    ["Implement Trie", 208, "M", ["S", "C"]],
+    ["Design Add and Search Words", 211, "M", ["S", "C"]],
+    ["Replace Words", 648, "M", ["S", "C"]],
+  ],
+  uf: [
+    ["Number of Provinces", 547, "M", ["S"]],
+    ["Redundant Connection", 684, "M", ["S"]],
+    ["Accounts Merge", 721, "M", ["S"]],
   ],
   dp: [
     ["Climbing Stairs", 70, "E", ["O", "I", "A", "D", "T", "F"]],
@@ -418,6 +386,9 @@ const P = {
     ["Partition Equal Subset Sum", 416, "M", ["O", "D"]],
     ["Target Sum", 494, "M", ["O", "D"]],
     ["Perfect Squares", 279, "M", ["O", "D"]],
+    ["Longest Common Subsequence", 1143, "M", ["S", "C", "L"]],
+    ["Triangle", 120, "M", ["S", "C", "L"]],
+    ["Maximal Square", 221, "M", ["C"]],
   ],
   bt: [
     ["Subsets", 78, "M", ["O", "D"]],
@@ -442,36 +413,11 @@ const P = {
     ["Top K Frequent Words", 692, "M", ["O", "D"]],
   ],
   sort: [
-    [
-      "Bubble Sort — Write from Scratch",
-      0,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
-    [
-      "Selection Sort — Write from Scratch",
-      0,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
-    [
-      "Insertion Sort — Write from Scratch",
-      0,
-      "E",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
-    [
-      "Merge Sort — Implement + Explain Complexity",
-      0,
-      "M",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
-    [
-      "Quick Sort — Implement + Explain Worst Case",
-      0,
-      "M",
-      ["O", "I", "A", "D", "T", "F"],
-    ],
+    ["Bubble Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F"]],
+    ["Selection Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F"]],
+    ["Insertion Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F"]],
+    ["Merge Sort — Implement + Explain Complexity", 0, "M", ["O", "I", "A", "D", "T", "F"]],
+    ["Quick Sort — Implement + Explain Worst Case", 0, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Counting Sort — When and How to Use", 0, "M", ["O", "D"]],
     ["Largest Number", 179, "M", ["O", "D"]],
     ["Sort Array by Parity", 905, "E", ["I", "A"]],
@@ -494,6 +440,7 @@ const P = {
     ["Count Primes", 204, "M", ["I", "A"]],
     ["GCD and LCM Euclidean Algorithm", 0, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Excel Sheet Column Number", 171, "E", ["I", "A"]],
+    ["Nth Ugly Number", 264, "M", ["S"]],
   ],
   matrix: [
     ["Rotate Image", 48, "M", ["O", "D"]],
@@ -575,7 +522,7 @@ export default function DSATracker() {
                 🎯 DSA Master Checklist
               </div>
               <div style={{ fontSize: 11, color: "#64748b", marginTop: 2 }}>
-                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera
+                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera · Smarsh · Capillary · Lower-Tier
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
@@ -624,7 +571,7 @@ export default function DSATracker() {
             />
           </div>
           <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
-            {["ALL", "O", "I", "A", "D", "T", "F"].map((co) => (
+            {["ALL", "O", "I", "A", "D", "T", "F", "S", "C", "L"].map((co) => (
               <button
                 key={co}
                 onClick={() => setFilter(co)}
