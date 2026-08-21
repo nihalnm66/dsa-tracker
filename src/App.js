@@ -257,7 +257,7 @@ const P = {
     ["Course Schedule II", 210, "M", ["O", "B"]],
     ["Pacific Atlantic Water Flow", 417, "M", ["O", "D"]],
     ["Surrounded Regions", 130, "M", ["O", "D"]],
-    ["Number of Connected Components", 323, "M", ["O", "D"]],
+    ["Number of Connected Components in an Undirected Graph", 323, "M", ["O", "D"]],
     ["Keys and Rooms", 841, "M", ["I", "D"]],
     ["Network Delay Time", 743, "M", ["S"]],
     ["Number of Distinct Islands", 694, "M", ["R"]],
