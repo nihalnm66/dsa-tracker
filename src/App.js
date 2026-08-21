@@ -197,8 +197,12 @@ const P = {
     ["Set Matrix Zeroes", 73, "M", ["O", "D", "R"]],
   ],
 };
+const mkSlug = (name) =>
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 
-// ... keep the rest of your React component exactly the same ...
 export default function DSATracker() {
   const [checked, setChecked] = useState({});
   const [filter, setFilter] = useState("ALL");
@@ -310,7 +314,7 @@ export default function DSATracker() {
             />
           </div>
           <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
-            {["ALL", "O", "I", "A", "D", "T", "F", "S", "C", "L"].map((co) => (
+            {["ALL", "O", "I", "A", "D", "T", "F", "S", "C", "L", "B", "R"].map((co) => (
               <button
                 key={co}
                 onClick={() => setFilter(co)}
