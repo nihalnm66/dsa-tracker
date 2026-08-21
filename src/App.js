@@ -24,8 +24,8 @@ const CO_CLR = {
   S: { background: "#ccfbf1", color: "#0f766e" },
   C: { background: "#fbcfe8", color: "#be185d" },
   L: { background: "#fef08a", color: "#854d0e" },
-  B: { background: "#e2e8f0", color: "#334155" }, // Slate/Dark Gray
-  R: { background: "#ffedd5", color: "#ea580c" }  // Orange
+  B: { background: "#e2e8f0", color: "#334155" },
+  R: { background: "#ffedd5", color: "#ea580c" }
 };
 
 const PRI_CLR = {
@@ -197,6 +197,7 @@ const P = {
     ["Set Matrix Zeroes", 73, "M", ["O", "D", "R"]],
   ],
 };
+
 const mkSlug = (name) =>
   name
     .toLowerCase()
@@ -265,7 +266,7 @@ export default function DSATracker() {
                 🎯 DSA Master Checklist
               </div>
               <div style={{ fontSize: 11, color: "#64748b", marginTop: 2 }}>
-                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera · Smarsh · Capillary · ⭑
+                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera · Smarsh · Capillary · ⭑ · Black Duck · Relx
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
