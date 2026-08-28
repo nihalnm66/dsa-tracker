@@ -65,7 +65,7 @@ const CATS = [
 
 const P = {
   arrays: [
-    ["Two Sum", 1, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S", "C", "L"]],
+    ["Two Sum", 1, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Best Time to Buy and Sell Stock", 121, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Contains Duplicate", 217, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Maximum Subarray", 53, "E", ["O", "I", "A", "D", "T", "F", "R"]],
@@ -125,7 +125,7 @@ const P = {
     ["Minimum Remove to Make Valid Parentheses", 1249, "M", ["R"]]
   ],
   hashmap: [
-    ["Two Sum II Input Array Is Sorted", 167, "E", ["O", "I", "A", "D", "T", "F", "R", "S", "C", "L"]],
+    ["Two Sum II Input Array Is Sorted", 167, "E", ["O", "I", "A", "D", "T", "F", "R"]],
     ["Top K Frequent Elements", 347, "M", ["O", "D", "T", "B", "R"]],
     ["Longest Consecutive Sequence", 128, "M", ["O", "A", "D", "B", "R"]],
     ["Valid Sudoku", 36, "M", ["O"]],
@@ -138,7 +138,7 @@ const P = {
     ["Insert Delete GetRandom O(1)", 380, "M", ["B"]],
   ],
   twoptr: [
-    ["Remove Duplicates from Sorted Array", 26, "E", ["O", "I", "A", "D", "T", "F", "S", "C", "L"]],
+    ["Remove Duplicates from Sorted Array", 26, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Remove Element", 27, "E", ["O", "I", "A", "D", "T", "F", "R"]],
     ["Merge Sorted Array", 88, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Squares of a Sorted Array", 977, "E", ["I", "A"]],
@@ -151,7 +151,7 @@ const P = {
     ["Next Permutation", 31, "M", ["R"]],
   ],
   sliding: [
-    ["Maximum Average Subarray I", 643, "E", ["O", "I", "A", "D", "T", "F", "S", "C", "L", "B"]],
+    ["Maximum Average Subarray I", 643, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Longest Substring Without Repeating Characters", 3, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Longest Substring with At Most K Distinct Characters", 340, "M", ["O", "D"]],
     ["Fruit Into Baskets", 904, "M", ["O"]],
@@ -165,7 +165,7 @@ const P = {
     ["Max Sum of Distinct Subarrays With Length K", 2461, "M", ["R"]],
   ],
   ll: [
-    ["Reverse Linked List", 206, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S", "C", "L"]],
+    ["Reverse Linked List", 206, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Merge Two Sorted Lists", 21, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Linked List Cycle", 141, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Linked List Cycle II", 142, "M", ["O", "D"]],
@@ -184,7 +184,7 @@ const P = {
     ["LFU Cache", 460, "H", ["B"]],
   ],
   stack: [
-    ["Valid Parentheses", 20, "E", ["O", "I", "A", "D", "T", "F", "S", "C", "L", "B", "R"]],
+    ["Valid Parentheses", 20, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Min Stack", 155, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Implement Queue using Stacks", 232, "E", ["I", "A"]],
     ["Implement Stack using Queues", 225, "E", ["I"]],
@@ -199,7 +199,7 @@ const P = {
     ["Decode String", 394, "M", ["O", "D"]],
   ],
   bs: [
-    ["Binary Search", 704, "E", ["O", "I", "A", "D", "T", "F", "B", "S", "C", "L", "R"]],
+    ["Binary Search", 704, "E", ["O", "I", "A", "D", "T", "F", "B"]],
     ["Search in Rotated Sorted Array", 33, "M", ["O", "I", "D", "B"]],
     ["Find Minimum in Rotated Sorted Array", 153, "M", ["O", "D", "B"]],
     ["Find Peak Element", 162, "M", ["O", "D"]],
@@ -213,7 +213,7 @@ const P = {
     ["Count Negative Numbers in a Sorted Matrix", 1351, "E", ["I", "F"]],
   ],
   trees: [
-    ["Maximum Depth of Binary Tree", 104, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "C"]],
+    ["Maximum Depth of Binary Tree", 104, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Minimum Depth of Binary Tree", 111, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Invert Binary Tree", 226, "E", ["O", "I", "A", "D", "T", "F", "B"]],
     ["Same Tree", 100, "E", ["O", "I", "A", "D", "T", "F", "B"]],
@@ -247,7 +247,7 @@ const P = {
     ["Sum Root to Leaf Numbers", 129, "M", ["R"]],
   ],
   graphs: [
-    ["Number of Islands", 200, "M", ["O", "A", "D", "T", "B", "R", "C", "L"]],
+    ["Number of Islands", 200, "M", ["O", "A", "D", "T", "B", "R"]],
     ["Flood Fill", 733, "E", ["I", "A"]],
     ["Max Area of Island", 695, "M", ["O", "D", "T", "B"]],
     ["Rotting Oranges", 994, "M", ["O", "A", "D", "T", "B", "R"]],
@@ -263,13 +263,13 @@ const P = {
     ["Number of Distinct Islands", 694, "M", ["R"]],
   ],
   trie: [
-    ["Implement Trie", 208, "M", ["S", "C", "B", "L", "R"]],
+    ["Implement Trie", 208, "M", ["S", "C", "B"]],
     ["Design Add and Search Words", 211, "M", ["S", "C", "B"]],
     ["Replace Words", 648, "M", ["S", "C"]],
     ["Word Search II", 212, "H", ["B"]],
   ],
   uf: [
-    ["Number of Provinces", 547, "M", ["S", "C", "L", "R"]],
+    ["Number of Provinces", 547, "M", ["S"]],
     ["Redundant Connection", 684, "M", ["S", "B"]],
     ["Accounts Merge", 721, "M", ["S"]],
     ["Word Ladder", 127, "H", ["B"]],
@@ -300,7 +300,7 @@ const P = {
     ["Regular Expression Matching", 10, "H", ["B"]],
   ],
   bt: [
-    ["Subsets", 78, "M", ["O", "D", "B", "S", "C", "L"]],
+    ["Subsets", 78, "M", ["O", "D", "B"]],
     ["Subsets II", 90, "M", ["O", "B"]],
     ["Permutations", 46, "M", ["O", "D", "T", "B", "R"]],
     ["Permutations II", 47, "M", ["O"]],
@@ -312,7 +312,7 @@ const P = {
     ["Palindrome Partitioning", 131, "M", ["O"]],
   ],
   heap: [
-    ["Kth Largest Element in an Array", 215, "M", ["O", "D", "T", "B", "S", "C", "L", "R"]],
+    ["Kth Largest Element in an Array", 215, "M", ["O", "D", "T", "B"]],
     ["K Closest Points to Origin", 973, "M", ["O", "D", "B"]],
     ["Task Scheduler", 621, "M", ["O", "T"]],
     ["Reorganize String", 767, "M", ["O", "D"]],
@@ -322,7 +322,7 @@ const P = {
     ["Top K Frequent Words", 692, "M", ["O", "D"]],
   ],
   sort: [
-    ["Bubble Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F", "S", "C", "L", "B", "R"]],
+    ["Bubble Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Selection Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Insertion Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Merge Sort — Implement + Explain Complexity", 0, "M", ["O", "I", "A", "D", "T", "F"]],
@@ -332,7 +332,7 @@ const P = {
     ["Sort Array by Parity", 905, "E", ["I", "A"]],
   ],
   bits: [
-    ["Single Number", 136, "E", ["O", "I", "A", "D", "T", "F", "S", "C", "L", "B", "R"]],
+    ["Single Number", 136, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Single Number II", 137, "M", ["O"]],
     ["Number of 1 Bits", 191, "E", ["I", "A"]],
     ["Counting Bits", 338, "E", ["I", "A"]],
@@ -342,7 +342,7 @@ const P = {
     ["Missing Number", 268, "E", ["O", "I", "A", "D", "T", "F"]],
   ],
   math: [
-    ["Palindrome Number", 9, "E", ["O", "I", "A", "D", "T", "F", "C", "L", "B"]],
+    ["Palindrome Number", 9, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Reverse Integer", 7, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Powx n", 50, "M", ["O", "D"]],
     ["Factorial Trailing Zeroes", 172, "M", ["O", "I"]],
@@ -358,7 +358,7 @@ const P = {
     ["The kth Factor of n", 1492, "M", ["R"]],
   ],
   matrix: [
-    ["Rotate Image", 48, "M", ["O", "D", "R", "S", "C", "L", "B"]],
+    ["Rotate Image", 48, "M", ["O", "D", "R"]],
     ["Spiral Matrix", 54, "M", ["O", "D", "R"]],
     ["Set Matrix Zeroes", 73, "M", ["O", "D", "R"]],
     ["Search a 2D Matrix", 74, "M", ["O", "D"]],
@@ -400,31 +400,24 @@ export default function DSATracker() {
     });
   };
 
-  const total = CATS.reduce((s, c) => s + (P[c.id]?.length || 0), 0);
-  const done = Object.keys(checked).length;
-  const pct = total ? Math.round((done / total) * 100) : 0;
+  // Calculate true filtered totals based on selected company
+  let filteredTotal = 0;
+  let filteredDone = 0;
 
-  // Per-company breakdown (only computed when a single company is selected)
-  const companyStats =
-    filter !== "ALL"
-      ? CATS.map((cat) => {
-          const probs = P[cat.id] || [];
-          const idxs = probs
-            .map((p, i) => ({ p, i }))
-            .filter(({ p }) => p[3].includes(filter));
-          const doneCount = idxs.filter(({ i }) => checked[`${cat.id}_${i}`]).length;
-          return {
-            id: cat.id,
-            label: cat.l,
-            emoji: cat.e,
-            total: idxs.length,
-            done: doneCount,
-          };
-        }).filter((c) => c.total > 0)
-      : [];
-  const companyTotal = companyStats.reduce((s, c) => s + c.total, 0);
-  const companyDone = companyStats.reduce((s, c) => s + c.done, 0);
-  const companyPct = companyTotal ? Math.round((companyDone / companyTotal) * 100) : 0;
+  CATS.forEach((cat) => {
+    const probs = P[cat.id] || [];
+    probs.forEach((prob, i) => {
+      const cos = prob[3];
+      if (filter === "ALL" || cos.includes(filter)) {
+        filteredTotal++;
+        if (checked[`${cat.id}_${i}`]) {
+          filteredDone++;
+        }
+      }
+    });
+  });
+
+  const pct = filteredTotal ? Math.round((filteredDone / filteredTotal) * 100) : 0;
 
   return (
     <div
@@ -464,11 +457,15 @@ export default function DSATracker() {
             </div>
             <div style={{ textAlign: "right" }}>
               <div>
-                <span style={{ fontWeight: 800, fontSize: 24, color: "#3b82f6" }}>
-                  {done}
+                <span
+                  style={{ fontWeight: 800, fontSize: 24, color: "#3b82f6" }}
+                >
+                  {filteredDone}
                 </span>
-                <span style={{ fontSize: 13, color: "#94a3b8", fontWeight: 500 }}>
-                  /{total}
+                <span
+                  style={{ fontSize: 13, color: "#94a3b8", fontWeight: 500 }}
+                >
+                  /{filteredTotal}
                 </span>
               </div>
               <div
@@ -478,7 +475,7 @@ export default function DSATracker() {
                   fontWeight: 600,
                 }}
               >
-                {pct}% overall
+                {pct}% done
               </div>
             </div>
           </div>
@@ -535,91 +532,9 @@ export default function DSATracker() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 820, margin: "0 auto", padding: "12px 16px 48px" }}>
-        {/* Per-company stats card */}
-        {filter !== "ALL" && (
-          <div
-            style={{
-              background: "white",
-              borderRadius: 12,
-              border: "1px solid #e2e8f0",
-              padding: 14,
-              marginBottom: 12,
-              boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginBottom: 10,
-              }}
-            >
-              <div style={{ fontWeight: 800, fontSize: 14, color: "#0f172a" }}>
-                {CO[filter]} — Company Breakdown
-              </div>
-              <div style={{ textAlign: "right" }}>
-                <span style={{ fontWeight: 800, fontSize: 18, color: "#3b82f6" }}>
-                  {companyDone}
-                </span>
-                <span style={{ fontSize: 12, color: "#94a3b8" }}>/{companyTotal}</span>
-                <span
-                  style={{
-                    fontSize: 11,
-                    marginLeft: 6,
-                    color: companyPct === 100 ? "#10b981" : "#64748b",
-                    fontWeight: 600,
-                  }}
-                >
-                  ({companyPct}%)
-                </span>
-              </div>
-            </div>
-            <div style={{ display: "grid", gap: 6 }}>
-              {companyStats.map((c) => {
-                const cp = c.total ? Math.round((c.done / c.total) * 100) : 0;
-                return (
-                  <div
-                    key={c.id}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 8,
-                      fontSize: 12,
-                    }}
-                  >
-                    <span style={{ width: 18 }}>{c.emoji}</span>
-                    <span style={{ flex: 1, color: "#334155", fontWeight: 500 }}>
-                      {c.label}
-                    </span>
-                    <div
-                      style={{
-                        width: 80,
-                        height: 5,
-                        background: "#e2e8f0",
-                        borderRadius: 99,
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: `${cp}%`,
-                          height: 5,
-                          background: cp === 100 ? "#10b981" : "#3b82f6",
-                          borderRadius: 99,
-                        }}
-                      />
-                    </div>
-                    <span style={{ width: 42, textAlign: "right", color: "#64748b" }}>
-                      {c.done}/{c.total}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
+      <div
+        style={{ maxWidth: 820, margin: "0 auto", padding: "12px 16px 48px" }}
+      >
         {/* Search */}
         <input
           placeholder="🔎  Search any problem by name..."
@@ -646,22 +561,24 @@ export default function DSATracker() {
             i,
             key: `${cat.id}_${i}`,
           }));
-          const visible = indexed.filter(({ prob: [name, , , cos] }) => {
-            const coOk = filter === "ALL" || cos.includes(filter);
-            const srOk = !search || name.toLowerCase().includes(search.toLowerCase());
-            return coOk && srOk;
+
+          // 1. Filter strictly for the company first so stats only reflect the selected company
+          const companyProbs = indexed.filter(({ prob: [ , , , cos] }) => {
+            return filter === "ALL" || cos.includes(filter);
           });
 
+          // 2. Filter for search for visibility
+          const visible = companyProbs.filter(({ prob: [name] }) => {
+            return !search || name.toLowerCase().includes(search.toLowerCase());
+          });
+
+          // If the company literally has 0 questions in this category, completely hide it
+          // OR if search returns nothing, hide it.
           if (!visible.length) return null;
 
-          const catBase =
-            filter === "ALL" ? probs : probs.filter((p) => p[3].includes(filter));
-          const catBaseIdx =
-            filter === "ALL"
-              ? probs.map((_, i) => i)
-              : probs.map((p, i) => (p[3].includes(filter) ? i : null)).filter((i) => i !== null);
-          const catDone = catBaseIdx.filter((i) => checked[`${cat.id}_${i}`]).length;
-          const catPct = catBase.length ? Math.round((catDone / catBase.length) * 100) : 0;
+          const catTotal = companyProbs.length;
+          const catDone = companyProbs.filter(({ key }) => checked[key]).length;
+          const catPct = catTotal ? Math.round((catDone / catTotal) * 100) : 0;
           const isOpen = !!exp[cat.id];
 
           return (
@@ -702,7 +619,13 @@ export default function DSATracker() {
                       marginBottom: 2,
                     }}
                   >
-                    <span style={{ fontWeight: 700, fontSize: 14, color: "#0f172a" }}>
+                    <span
+                      style={{
+                        fontWeight: 700,
+                        fontSize: 14,
+                        color: "#0f172a",
+                      }}
+                    >
                       {cat.l}
                     </span>
                     <span
@@ -736,7 +659,7 @@ export default function DSATracker() {
                         color: catPct === 100 ? "#10b981" : "#475569",
                       }}
                     >
-                      {catDone}/{catBase.length}
+                      {catDone}/{catTotal}
                     </div>
                     <div
                       style={{
@@ -784,12 +707,15 @@ export default function DSATracker() {
                           transition: "background 0.1s",
                         }}
                       >
+                        {/* Checkbox */}
                         <div
                           style={{
                             width: 20,
                             height: 20,
                             borderRadius: 5,
-                            border: `2px solid ${isDone ? "#10b981" : "#d1d5db"}`,
+                            border: `2px solid ${
+                              isDone ? "#10b981" : "#d1d5db"
+                            }`,
                             background: isDone ? "#10b981" : "white",
                             display: "flex",
                             alignItems: "center",
@@ -812,6 +738,7 @@ export default function DSATracker() {
                           )}
                         </div>
 
+                        {/* Name + company tags */}
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div
                             style={{
@@ -850,8 +777,8 @@ export default function DSATracker() {
                                   padding: "1px 5px",
                                   borderRadius: 4,
                                   fontWeight: 700,
-                                  background: CO_CLR[co].background,
-                                  color: CO_CLR[co].color,
+                                  background: CO_CLR[co]?.background || "#e2e8f0",
+                                  color: CO_CLR[co]?.color || "#334155",
                                 }}
                               >
                                 {co === "T" ? "T.Reuters" : CO[co]}
@@ -860,6 +787,7 @@ export default function DSATracker() {
                           </div>
                         </div>
 
+                        {/* Difficulty + LC link */}
                         <div
                           style={{
                             display: "flex",
@@ -881,8 +809,10 @@ export default function DSATracker() {
                             {DIFF[diff].label}
                           </span>
                           {lc > 0 && (
-                            
-                              href={`https://leetcode.com/problems/${mkSlug(name)}/`}
+                            <a
+                              href={`https://leetcode.com/problems/${mkSlug(
+                                name
+                              )}/`}
                               target="_blank"
                               rel="noopener noreferrer"
                               onClick={(e) => e.stopPropagation()}
@@ -919,8 +849,15 @@ export default function DSATracker() {
             marginTop: 4,
           }}
         >
-          <div style={{ fontWeight: 700, fontSize: 13, color: "#1e293b", marginBottom: 12 }}>
-            📊 Progress by Difficulty (Overall)
+          <div
+            style={{
+              fontWeight: 700,
+              fontSize: 13,
+              color: "#1e293b",
+              marginBottom: 12,
+            }}
+          >
+            📊 Progress by Difficulty
           </div>
           <div
             style={{
@@ -938,9 +875,10 @@ export default function DSATracker() {
               const all = CATS.flatMap((cat) =>
                 (P[cat.id] || []).map((prob, i) => ({
                   d: prob[2],
+                  cos: prob[3],
                   key: `${cat.id}_${i}`,
                 }))
-              ).filter((x) => x.d === d);
+              ).filter((x) => x.d === d && (filter === "ALL" || x.cos.includes(filter)));
               const dn = all.filter((x) => checked[x.key]).length;
               return (
                 <div
@@ -955,14 +893,28 @@ export default function DSATracker() {
                   <div style={{ fontWeight: 800, fontSize: 22, color: c }}>
                     {dn}/{all.length}
                   </div>
-                  <div style={{ fontSize: 11, color: c, fontWeight: 600, marginTop: 2 }}>
+                  <div
+                    style={{
+                      fontSize: 11,
+                      color: c,
+                      fontWeight: 600,
+                      marginTop: 2,
+                    }}
+                  >
                     {label}
                   </div>
                 </div>
               );
             })}
           </div>
-          <div style={{ fontSize: 11, color: "#94a3b8", textAlign: "center", marginTop: 4 }}>
+          <div
+            style={{
+              fontSize: 11,
+              color: "#94a3b8",
+              textAlign: "center",
+              marginTop: 4,
+            }}
+          >
             ✅ Your progress saves automatically across sessions
           </div>
         </div>
