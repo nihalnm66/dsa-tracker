@@ -7,9 +7,6 @@ const CO = {
   D: "Dell",
   T: "Thomson Reuters",
   F: "Flexera",
-  S: "Smarsh",
-  C: "Capillary",
-  L: "⭑",
   B: "Black Duck",
   R: "Relx"
 };
@@ -21,9 +18,6 @@ const CO_CLR = {
   D: { background: "#e0f2fe", color: "#0369a1" },
   T: { background: "#ffedd5", color: "#c2410c" },
   F: { background: "#d1fae5", color: "#065f46" },
-  S: { background: "#ccfbf1", color: "#0f766e" },
-  C: { background: "#fbcfe8", color: "#be185d" },
-  L: { background: "#fef08a", color: "#854d0e" },
   B: { background: "#e2e8f0", color: "#334155" },
   R: { background: "#ffedd5", color: "#ea580c" }
 };
@@ -114,11 +108,11 @@ const P = {
     ["Roman to Integer", 13, "E", ["O", "I", "A", "D", "T", "F", "R"]],
     ["Integer to Roman", 12, "M", ["O", "D", "R"]],
     ["Count and Say", 38, "M", ["I", "F", "R"]],
-    ["Find Index of First Occurrence", 28, "E", ["S", "L", "R"]],
-    ["Repeated Substring Pattern", 459, "E", ["L", "R"]],
-    ["Rotate String", 796, "E", ["L", "R"]],
-    ["String Compression", 443, "M", ["S", "C", "L", "R"]],
-    ["Minimum Steps to Make Anagram", 1347, "M", ["S", "R"]],
+    ["Find Index of First Occurrence", 28, "E", ["R"]],
+    ["Repeated Substring Pattern", 459, "E", ["R"]],
+    ["Rotate String", 796, "E", ["R"]],
+    ["String Compression", 443, "M", ["R"]],
+    ["Minimum Steps to Make Anagram", 1347, "M", ["R"]],
     ["Group Shifted Strings", 249, "M", ["R"]],
     ["Shortest Word Distance II", 244, "M", ["R"]],
     ["Valid Word Abbreviation", 408, "E", ["R"]],
@@ -240,10 +234,10 @@ const P = {
     ["Construct Binary Tree from Preorder and Inorder Traversal", 105, "M", ["O", "D", "B", "R"]],
     ["Delete Node in a BST", 450, "M", ["O", "D", "R"]],
     ["Binary Tree Maximum Path Sum", 124, "H", ["O", "B", "R"]],
-    ["Convert Sorted Array to BST", 108, "E", ["L", "R"]],
-    ["Populating Next Right Pointers", 116, "M", ["S", "L", "R"]],
-    ["Count Complete Tree Nodes", 222, "M", ["L", "R"]],
-    ["Trim a BST", 669, "M", ["S", "R"]],
+    ["Convert Sorted Array to BST", 108, "E", ["R"]],
+    ["Populating Next Right Pointers", 116, "M", ["R"]],
+    ["Count Complete Tree Nodes", 222, "M", ["R"]],
+    ["Trim a BST", 669, "M", ["R"]],
     ["Subtree of Another Tree", 572, "E", ["B", "R"]],
     ["Convert Sorted List to Binary Search Tree", 109, "M", ["R"]],
     ["Sum Root to Leaf Numbers", 129, "M", ["R"]],
@@ -263,21 +257,21 @@ const P = {
     ["Surrounded Regions", 130, "M", ["O", "D", "R"]],
     ["Number of Connected Components in an Undirected Graph", 323, "M", ["O", "D", "R"]],
     ["Keys and Rooms", 841, "M", ["I", "D", "R"]],
-    ["Network Delay Time", 743, "M", ["S", "R"]],
+    ["Network Delay Time", 743, "M", ["R"]],
     ["Number of Distinct Islands", 694, "M", ["R"]],
     ["Minimum Time to Visit a Cell In a Grid", 2577, "H", ["R"]],
   ],
   trie: [
-    ["Implement Trie", 208, "M", ["S", "C", "B", "R"]],
-    ["Design Add and Search Words", 211, "M", ["S", "C", "B", "R"]],
-    ["Replace Words", 648, "M", ["S", "C", "R"]],
+    ["Implement Trie", 208, "M", ["B", "R"]],
+    ["Design Add and Search Words", 211, "M", ["B", "R"]],
+    ["Replace Words", 648, "M", ["R"]],
     ["Word Search II", 212, "H", ["B", "R"]],
     ["Search Suggestions System", 1268, "M", ["R"]],
   ],
   uf: [
-    ["Number of Provinces", 547, "M", ["S", "R"]],
-    ["Redundant Connection", 684, "M", ["S", "B", "R"]],
-    ["Accounts Merge", 721, "M", ["S", "R"]],
+    ["Number of Provinces", 547, "M", ["R"]],
+    ["Redundant Connection", 684, "M", ["B", "R"]],
+    ["Accounts Merge", 721, "M", ["R"]],
     ["Word Ladder", 127, "H", ["B", "R"]],
     ["Word Ladder II", 126, "H", ["R"]],
   ],
@@ -300,9 +294,9 @@ const P = {
     ["Partition Equal Subset Sum", 416, "M", ["O", "D", "R"]],
     ["Target Sum", 494, "M", ["O", "D", "R"]],
     ["Perfect Squares", 279, "M", ["O", "D", "R"]],
-    ["Longest Common Subsequence", 1143, "M", ["S", "C", "L", "B", "R"]],
-    ["Triangle", 120, "M", ["S", "C", "L", "R"]],
-    ["Maximal Square", 221, "M", ["C", "R"]],
+    ["Longest Common Subsequence", 1143, "M", ["B", "R"]],
+    ["Triangle", 120, "M", ["R"]],
+    ["Maximal Square", 221, "M", ["R"]],
     ["Edit Distance", 72, "H", ["B", "R"]],
     ["Regular Expression Matching", 10, "H", ["B", "R"]],
   ],
@@ -357,7 +351,7 @@ const P = {
     ["Count Primes", 204, "M", ["I", "A", "R"]],
     ["GCD and LCM Euclidean Algorithm", 0, "E", ["O", "I", "A", "D", "T", "F", "R"]],
     ["Excel Sheet Column Number", 171, "E", ["I", "A", "R"]],
-    ["Nth Ugly Number", 264, "M", ["S", "R"]],
+    ["Nth Ugly Number", 264, "M", ["R"]],
     ["Best Time to Buy and Sell Stock II", 122, "M", ["R"]],
     ["Gas Station", 134, "M", ["R"]],
     ["Split Array Largest Sum", 410, "H", ["R"]],
@@ -519,8 +513,9 @@ export default function DSATracker() {
   let filteredTotal = 0;
   let filteredDone = 0;
 
-  CATS.forEach((cat) => {
-    const probs = P[cat.id] || [];
+  if (filter !== "RX") {
+    CATS.forEach((cat) => {
+      const probs = P[cat.id] || [];
     probs.forEach((prob, i) => {
       const cos = prob[3];
       if (filter === "ALL" || cos.includes(filter)) {
@@ -530,10 +525,11 @@ export default function DSATracker() {
         }
       }
     });
-  });
+    });
+  }
 
-  // RELX_EXTRA is included in ALL and RELX progress.
-  if (filter === "ALL" || filter === "R") {
+  // RELX_EXTRA is included in ALL and RELX progress; RX shows only RELX Extra.
+  if (filter === "ALL" || filter === "R" || filter === "RX") {
     filteredTotal += RELX_EXTRA.length;
     filteredDone += RELX_EXTRA.filter((_, i) => checked[`relx_extra_${i}`]).length;
   }
@@ -572,7 +568,7 @@ export default function DSATracker() {
                 🎯 DSA Master Checklist
               </div>
               <div style={{ fontSize: 11, color: "#64748b", marginTop: 2 }}>
-                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera · Smarsh · Capillary · ⭑ · Black Duck · Relx · RELX Extra
+                Oracle · IBM · Accenture · Dell · Thomson Reuters · Flexera · Black Duck · Relx · RELX Extra
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
@@ -621,7 +617,7 @@ export default function DSATracker() {
             />
           </div>
           <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
-            {["ALL", "O", "I", "A", "D", "T", "F", "S", "C", "L", "B", "R"].map((co) => (
+            {["ALL", "O", "I", "A", "D", "T", "F", "B", "R", "RX"].map((co) => (
               <button
                 key={co}
                 onClick={() => setFilter(co)}
@@ -645,7 +641,7 @@ export default function DSATracker() {
                       }),
                 }}
               >
-                {co === "ALL" ? "All" : CO[co]}
+                {co === "ALL" ? "All" : co === "RX" ? "RELX Extra" : CO[co]}
               </button>
             ))}
           </div>
@@ -672,7 +668,7 @@ export default function DSATracker() {
           }}
         />
 
-        {CATS.map((cat) => {
+        {filter !== "RX" && CATS.map((cat) => {
           const probs = P[cat.id] || [];
           const indexed = probs.map((prob, i) => ({
             prob,
@@ -961,7 +957,7 @@ export default function DSATracker() {
             marginTop: 4,
           }}
         >
-          {(filter === "ALL" || filter === "R") && (
+          {(filter === "ALL" || filter === "R" || filter === "RX") && (
           <div style={{ marginBottom: 8, background: "white", borderRadius: 12, border: "1px solid #e2e8f0", overflow: "hidden", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
             <div style={{ padding: "12px 16px", borderBottom: "1px solid #f1f5f9", display: "flex", alignItems: "center", gap: 10 }}>
               <span style={{ fontSize: 22 }}>🧩</span>
