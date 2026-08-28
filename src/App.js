@@ -400,9 +400,22 @@ export default function DSATracker() {
     });
   };
 
-  const total = CATS.reduce((s, c) => s + (P[c.id]?.length || 0), 0);
-  const done = Object.keys(checked).length;
-  const pct = total ? Math.round((done / total) * 100) : 0;
+  // Calculate dynamic global totals based on the selected company filter
+  let globalTotal = 0;
+  let globalDone = 0;
+  
+  CATS.forEach((cat) => {
+    const probs = P[cat.id] || [];
+    probs.forEach((prob, i) => {
+      const cos = prob[3];
+      if (filter === "ALL" || cos.includes(filter)) {
+        globalTotal++;
+        if (checked[`${cat.id}_${i}`]) globalDone++;
+      }
+    });
+  });
+  
+  const pct = globalTotal ? Math.round((globalDone / globalTotal) * 100) : 0;
 
   return (
     <div
@@ -445,12 +458,12 @@ export default function DSATracker() {
                 <span
                   style={{ fontWeight: 800, fontSize: 24, color: "#3b82f6" }}
                 >
-                  {done}
+                  {globalDone}
                 </span>
                 <span
                   style={{ fontSize: 13, color: "#94a3b8", fontWeight: 500 }}
                 >
-                  /{total}
+                  /{globalTotal}
                 </span>
               </div>
               <div
@@ -546,19 +559,20 @@ export default function DSATracker() {
             i,
             key: `${cat.id}_${i}`,
           }));
+          
           const visible = indexed.filter(({ prob: [name, , , cos] }) => {
             const coOk = filter === "ALL" || cos.includes(filter);
             const srOk =
               !search || name.toLowerCase().includes(search.toLowerCase());
             return coOk && srOk;
           });
-          
+
           if (!visible.length) return null;
 
-          const catDone = probs.filter(
-            (_, i) => checked[`${cat.id}_${i}`]
-          ).length;
-          const catPct = Math.round((catDone / probs.length) * 100);
+          const companyProbs = indexed.filter(({ prob: [, , , cos] }) => filter === "ALL" || cos.includes(filter));
+          const catTotal = companyProbs.length;
+          const catDone = companyProbs.filter(({ key }) => checked[key]).length;
+          const catPct = catTotal ? Math.round((catDone / catTotal) * 100) : 0;
           const isOpen = !!exp[cat.id];
 
           return (
@@ -636,10 +650,10 @@ export default function DSATracker() {
                       style={{
                         fontSize: 12,
                         fontWeight: 600,
-                        color: catPct === 100 ? "#10b981" : "#475569",
+                        color: catPct === 100 && catTotal > 0 ? "#10b981" : "#475569",
                       }}
                     >
-                      {catDone}/{probs.length}
+                      {catDone}/{catTotal}
                     </div>
                     <div
                       style={{
@@ -654,7 +668,7 @@ export default function DSATracker() {
                         style={{
                           width: `${catPct}%`,
                           height: 4,
-                          background: catPct === 100 ? "#10b981" : "#3b82f6",
+                          background: catPct === 100 && catTotal > 0 ? "#10b981" : "#3b82f6",
                           borderRadius: 99,
                           transition: "width 0.3s",
                         }}
@@ -855,9 +869,10 @@ export default function DSATracker() {
               const all = CATS.flatMap((cat) =>
                 (P[cat.id] || []).map((prob, i) => ({
                   d: prob[2],
+                  cos: prob[3],
                   key: `${cat.id}_${i}`,
                 }))
-              ).filter((x) => x.d === d);
+              ).filter((x) => x.d === d && (filter === "ALL" || x.cos.includes(filter)));
               const dn = all.filter((x) => checked[x.key]).length;
               return (
                 <div
