@@ -546,24 +546,19 @@ export default function DSATracker() {
             i,
             key: `${cat.id}_${i}`,
           }));
-
           const visible = indexed.filter(({ prob: [name, , , cos] }) => {
             const coOk = filter === "ALL" || cos.includes(filter);
             const srOk =
               !search || name.toLowerCase().includes(search.toLowerCase());
             return coOk && srOk;
           });
-
-          // Hide categories completely if they have no matching problems for the selected filter/search
+          
           if (!visible.length) return null;
 
-          const categoryPool = filter === "ALL" 
-            ? indexed 
-            : indexed.filter(({ prob: [,, , cos] }) => cos.includes(filter));
-
-          const catDone = categoryPool.filter(({ key }) => checked[key]).length;
-          const catTotal = categoryPool.length;
-          const catPct = catTotal > 0 ? Math.round((catDone / catTotal) * 100) : 0;
+          const catDone = probs.filter(
+            (_, i) => checked[`${cat.id}_${i}`]
+          ).length;
+          const catPct = Math.round((catDone / probs.length) * 100);
           const isOpen = !!exp[cat.id];
 
           return (
@@ -641,10 +636,10 @@ export default function DSATracker() {
                       style={{
                         fontSize: 12,
                         fontWeight: 600,
-                        color: catPct === 100 && catTotal > 0 ? "#10b981" : "#475569",
+                        color: catPct === 100 ? "#10b981" : "#475569",
                       }}
                     >
-                      {catDone}/{catTotal}
+                      {catDone}/{probs.length}
                     </div>
                     <div
                       style={{
@@ -659,7 +654,7 @@ export default function DSATracker() {
                         style={{
                           width: `${catPct}%`,
                           height: 4,
-                          background: catPct === 100 && catTotal > 0 ? "#10b981" : "#3b82f6",
+                          background: catPct === 100 ? "#10b981" : "#3b82f6",
                           borderRadius: 99,
                           transition: "width 0.3s",
                         }}
