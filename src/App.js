@@ -552,7 +552,6 @@ export default function DSATracker() {
               !search || name.toLowerCase().includes(search.toLowerCase());
             return coOk && srOk;
           });
-          if (!visible.length) return null;
 
           const catDone = probs.filter(
             (_, i) => checked[`${cat.id}_${i}`]
@@ -669,149 +668,155 @@ export default function DSATracker() {
               {/* Problem rows */}
               {isOpen && (
                 <div style={{ borderTop: "1px solid #f1f5f9" }}>
-                  {visible.map(({ prob: [name, lc, diff, cos], key }) => {
-                    const isDone = !!checked[key];
-                    return (
-                      <div
-                        key={key}
-                        onClick={() => toggle(key)}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 10,
-                          padding: "9px 16px",
-                          cursor: "pointer",
-                          borderBottom: "1px solid #f8fafc",
-                          background: isDone ? "#f0fdf4" : "white",
-                          transition: "background 0.1s",
-                        }}
-                      >
-                        {/* Checkbox */}
+                  {visible.length === 0 ? (
+                    <div style={{ padding: "12px 16px", fontSize: 12, color: "#94a3b8", fontStyle: "italic" }}>
+                      No problems match this filter in this category.
+                    </div>
+                  ) : (
+                    visible.map(({ prob: [name, lc, diff, cos], key }) => {
+                      const isDone = !!checked[key];
+                      return (
                         <div
+                          key={key}
+                          onClick={() => toggle(key)}
                           style={{
-                            width: 20,
-                            height: 20,
-                            borderRadius: 5,
-                            border: `2px solid ${
-                              isDone ? "#10b981" : "#d1d5db"
-                            }`,
-                            background: isDone ? "#10b981" : "white",
                             display: "flex",
                             alignItems: "center",
-                            justifyContent: "center",
-                            flexShrink: 0,
-                            transition: "all 0.15s",
+                            gap: 10,
+                            padding: "9px 16px",
+                            cursor: "pointer",
+                            borderBottom: "1px solid #f8fafc",
+                            background: isDone ? "#f0fdf4" : "white",
+                            transition: "background 0.1s",
                           }}
                         >
-                          {isDone && (
-                            <span
-                              style={{
-                                color: "white",
-                                fontSize: 11,
-                                fontWeight: 800,
-                                lineHeight: 1,
-                              }}
-                            >
-                              ✓
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Name + company tags */}
-                        <div style={{ flex: 1, minWidth: 0 }}>
+                          {/* Checkbox */}
                           <div
                             style={{
-                              fontSize: 13,
-                              fontWeight: 500,
-                              color: isDone ? "#9ca3af" : "#1e293b",
-                              textDecoration: isDone ? "line-through" : "none",
+                              width: 20,
+                              height: 20,
+                              borderRadius: 5,
+                              border: `2px solid ${
+                                isDone ? "#10b981" : "#d1d5db"
+                              }`,
+                              background: isDone ? "#10b981" : "white",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              flexShrink: 0,
+                              transition: "all 0.15s",
                             }}
                           >
-                            {lc > 0 && (
+                            {isDone && (
                               <span
                                 style={{
-                                  color: "#94a3b8",
+                                  color: "white",
                                   fontSize: 11,
-                                  marginRight: 4,
+                                  fontWeight: 800,
+                                  lineHeight: 1,
                                 }}
                               >
-                                #{lc}
+                                ✓
                               </span>
                             )}
-                            {name}
                           </div>
+
+                          {/* Name + company tags */}
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div
+                              style={{
+                                fontSize: 13,
+                                fontWeight: 500,
+                                color: isDone ? "#9ca3af" : "#1e293b",
+                                textDecoration: isDone ? "line-through" : "none",
+                              }}
+                            >
+                              {lc > 0 && (
+                                <span
+                                  style={{
+                                    color: "#94a3b8",
+                                    fontSize: 11,
+                                    marginRight: 4,
+                                  }}
+                                >
+                                  #{lc}
+                                </span>
+                              )}
+                              {name}
+                            </div>
+                            <div
+                              style={{
+                                display: "flex",
+                                gap: 3,
+                                flexWrap: "wrap",
+                                marginTop: 4,
+                              }}
+                            >
+                              {cos.map((co) => (
+                                <span
+                                  key={co}
+                                  style={{
+                                    fontSize: 9,
+                                    padding: "1px 5px",
+                                    borderRadius: 4,
+                                    fontWeight: 700,
+                                    background: CO_CLR[co].background,
+                                    color: CO_CLR[co].color,
+                                  }}
+                                >
+                                  {co === "T" ? "T.Reuters" : CO[co]}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Difficulty + LC link */}
                           <div
                             style={{
                               display: "flex",
-                              gap: 3,
-                              flexWrap: "wrap",
-                              marginTop: 4,
+                              alignItems: "center",
+                              gap: 6,
+                              flexShrink: 0,
                             }}
                           >
-                            {cos.map((co) => (
-                              <span
-                                key={co}
-                                style={{
-                                  fontSize: 9,
-                                  padding: "1px 5px",
-                                  borderRadius: 4,
-                                  fontWeight: 700,
-                                  background: CO_CLR[co].background,
-                                  color: CO_CLR[co].color,
-                                }}
-                              >
-                                {co === "T" ? "T.Reuters" : CO[co]}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Difficulty + LC link */}
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 6,
-                            flexShrink: 0,
-                          }}
-                        >
-                          <span
-                            style={{
-                              fontSize: 11,
-                              padding: "2px 8px",
-                              borderRadius: 99,
-                              fontWeight: 600,
-                              background: DIFF[diff].background,
-                              color: DIFF[diff].color,
-                            }}
-                          >
-                            {DIFF[diff].label}
-                          </span>
-                          {lc > 0 && (
-                            <a
-                              href={`https://leetcode.com/problems/${mkSlug(
-                                name
-                              )}/`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
+                            <span
                               style={{
-                                fontSize: 10,
-                                color: "#3b82f6",
-                                padding: "2px 6px",
-                                borderRadius: 4,
-                                border: "1px solid #bfdbfe",
-                                textDecoration: "none",
-                                fontWeight: 700,
+                                fontSize: 11,
+                                padding: "2px 8px",
+                                borderRadius: 99,
+                                fontWeight: 600,
+                                background: DIFF[diff].background,
+                                color: DIFF[diff].color,
                               }}
                             >
-                              LC ↗
-                            </a>
-                          )}
+                              {DIFF[diff].label}
+                            </span>
+                            {lc > 0 && (
+                              <a
+                                href={`https://leetcode.com/problems/${mkSlug(
+                                  name
+                                )}/`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                style={{
+                                  fontSize: 10,
+                                  color: "#3b82f6",
+                                  padding: "2px 6px",
+                                  borderRadius: 4,
+                                  border: "1px solid #bfdbfe",
+                                  textDecoration: "none",
+                                  fontWeight: 700,
+                                }}
+                              >
+                                LC ↗
+                              </a>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })
+                  )}
                 </div>
               )}
             </div>
