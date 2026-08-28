@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/dsa-tracker/static/js/main.206869dd.js",
+    "main.js": "/dsa-tracker/static/js/main.d2fc4eb2.js",
     "index.html": "/dsa-tracker/index.html",
-    "main.206869dd.js.map": "/dsa-tracker/static/js/main.206869dd.js.map"
+    "main.d2fc4eb2.js.map": "/dsa-tracker/static/js/main.d2fc4eb2.js.map"
   },
   "entrypoints": [
-    "static/js/main.206869dd.js"
+    "static/js/main.d2fc4eb2.js"
   ]
 }
