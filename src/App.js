@@ -65,27 +65,27 @@ const CATS = [
 
 const P = {
   arrays: [
-    ["Two Sum", 1, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S", "C"]],
+    ["Two Sum", 1, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Best Time to Buy and Sell Stock", 121, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
-    ["Contains Duplicate", 217, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S"]],
-    ["Maximum Subarray", 53, "E", ["O", "I", "A", "D", "T", "F", "R", "S"]],
+    ["Contains Duplicate", 217, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
+    ["Maximum Subarray", 53, "E", ["O", "I", "A", "D", "T", "F", "R"]],
     ["Product of Array Except Self", 238, "M", ["O", "A", "D", "T", "B", "R"]],
     ["Maximum Product Subarray", 152, "M", ["O", "D", "T"]],
     ["Find Minimum in Rotated Sorted Array", 153, "M", ["O", "D", "B"]],
     ["Search in Rotated Sorted Array", 33, "M", ["O", "I", "D", "B"]],
     ["3Sum", 15, "M", ["O", "A", "D", "T", "B", "R"]],
     ["Container With Most Water", 11, "M", ["O", "A", "D", "B", "R"]],
-    ["Subarray Sum Equals K", 560, "M", ["O", "I", "A", "D", "T", "F", "S"]],
+    ["Subarray Sum Equals K", 560, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Majority Element", 169, "E", ["O", "I", "A", "D", "T", "F", "R"]],
-    ["Move Zeroes", 283, "E", ["O", "I", "A", "D", "T", "F", "S"]],
+    ["Move Zeroes", 283, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Rotate Array", 189, "M", ["I", "A", "D"]],
     ["Find the Duplicate Number", 287, "M", ["O", "D"]],
     ["Missing Number", 268, "E", ["O", "I", "A", "D", "T", "F"]],
-    ["Single Number", 136, "E", ["O", "I", "A", "D", "T", "F", "C"]],
+    ["Single Number", 136, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Sort Colors", 75, "M", ["O", "A", "D"]],
     ["Merge Intervals", 56, "M", ["O", "D", "T", "R"]],
     ["Insert Interval", 57, "M", ["O"]],
-    ["Meeting Rooms II", 253, "M", ["T", "A", "C"]],
+    ["Meeting Rooms II", 253, "M", ["T", "A"]],
     ["Pascals Triangle", 118, "E", ["I", "A"]],
     ["Spiral Matrix", 54, "M", ["O", "D", "R"]],
     ["Set Matrix Zeroes", 73, "M", ["O", "D", "R"]],
@@ -94,14 +94,14 @@ const P = {
     ["Largest Number", 179, "M", ["R"]]
   ],
   strings: [
-    ["Valid Anagram", 242, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S"]],
-    ["Valid Palindrome", 125, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S"]],
+    ["Valid Anagram", 242, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
+    ["Valid Palindrome", 125, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Longest Common Prefix", 14, "E", ["O", "I", "A", "D", "T", "F"]],
-    ["Longest Substring Without Repeating Characters", 3, "M", ["O", "I", "A", "D", "T", "F", "B", "R", "S", "C"]],
+    ["Longest Substring Without Repeating Characters", 3, "M", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Longest Palindromic Substring", 5, "M", ["O", "D", "T", "B", "R"]],
     ["String to Integer Atoi", 8, "M", ["I", "A"]],
     ["Reverse Words in a String", 151, "M", ["O", "I", "A", "D", "T", "F", "R"]],
-    ["First Unique Character in a String", 387, "E", ["O", "I", "A", "D", "T", "F", "S"]],
+    ["First Unique Character in a String", 387, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Group Anagrams", 49, "M", ["O", "D", "T", "B", "R"]],
     ["Find All Anagrams in a String", 438, "M", ["O", "D"]],
     ["Permutation in String", 567, "M", ["O", "D", "T"]],
@@ -110,27 +110,26 @@ const P = {
     ["Isomorphic Strings", 205, "E", ["I", "A"]],
     ["Generate Parentheses", 22, "M", ["O", "D"]],
     ["Longest Repeating Character Replacement", 424, "M", ["D", "T", "B"]],
-    ["Valid Parentheses", 20, "E", ["O", "I", "A", "D", "T", "F", "R", "C"]],
-    ["Roman to Integer", 13, "E", ["O", "I", "A", "D", "T", "F", "S"]],
+    ["Valid Parentheses", 20, "E", ["O", "I", "A", "D", "T", "F", "R"]],
+    ["Roman to Integer", 13, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Integer to Roman", 12, "M", ["O", "D"]],
     ["Count and Say", 38, "M", ["I", "F"]],
-    ["Find Index of First Occurrence", 28, "E", ["S", "L"]],
+    ["Find Index of First Occurrence", 28, "E", ["S", "L", "R"]],
     ["Repeated Substring Pattern", 459, "E", ["L"]],
-    ["Rotate String", 796, "E", ["L", "S"]],
+    ["Rotate String", 796, "E", ["L"]],
     ["String Compression", 443, "M", ["S", "C", "L", "R"]],
     ["Minimum Steps to Make Anagram", 1347, "M", ["S"]],
     ["Group Shifted Strings", 249, "M", ["R"]],
     ["Shortest Word Distance II", 244, "M", ["R"]],
     ["Valid Word Abbreviation", 408, "E", ["R"]],
-    ["Minimum Remove to Make Valid Parentheses", 1249, "M", ["R"]],
-    ["Regular Expression Matching", 10, "H", ["B", "C"]]
+    ["Minimum Remove to Make Valid Parentheses", 1249, "M", ["R"]]
   ],
   hashmap: [
     ["Two Sum II Input Array Is Sorted", 167, "E", ["O", "I", "A", "D", "T", "F", "R"]],
     ["Top K Frequent Elements", 347, "M", ["O", "D", "T", "B", "R"]],
     ["Longest Consecutive Sequence", 128, "M", ["O", "A", "D", "B", "R"]],
     ["Valid Sudoku", 36, "M", ["O"]],
-    ["Word Pattern", 290, "E", ["I", "A", "S"]],
+    ["Word Pattern", 290, "E", ["I", "A"]],
     ["Happy Number", 202, "E", ["I", "F"]],
     ["4Sum II", 454, "M", ["O"]],
     ["Contains Duplicate II", 219, "E", ["I"]],
@@ -139,9 +138,9 @@ const P = {
     ["Insert Delete GetRandom O(1)", 380, "M", ["B"]],
   ],
   twoptr: [
-    ["Remove Duplicates from Sorted Array", 26, "E", ["O", "I", "A", "D", "T", "F", "S"]],
+    ["Remove Duplicates from Sorted Array", 26, "E", ["O", "I", "A", "D", "T", "F", "R"]],
     ["Remove Element", 27, "E", ["O", "I", "A", "D", "T", "F", "R"]],
-    ["Merge Sorted Array", 88, "E", ["O", "I", "A", "D", "T", "F", "B"]],
+    ["Merge Sorted Array", 88, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Squares of a Sorted Array", 977, "E", ["I", "A"]],
     ["Backspace String Compare", 844, "E", ["I", "A"]],
     ["Minimum Size Subarray Sum", 209, "M", ["O", "D"]],
@@ -152,7 +151,7 @@ const P = {
     ["Next Permutation", 31, "M", ["R"]],
   ],
   sliding: [
-    ["Maximum Average Subarray I", 643, "E", ["O", "I", "A", "D", "T", "F", "S"]],
+    ["Maximum Average Subarray I", 643, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Longest Substring Without Repeating Characters", 3, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Longest Substring with At Most K Distinct Characters", 340, "M", ["O", "D"]],
     ["Fruit Into Baskets", 904, "M", ["O"]],
@@ -164,16 +163,18 @@ const P = {
     ["Count Number of Nice Subarrays", 1248, "M", ["O", "D"]],
     ["Longest Continuous Subarray With Absolute Diff Limit", 1438, "M", ["R"]],
     ["Max Sum of Distinct Subarrays With Length K", 2461, "M", ["R"]],
+    ["Continuous Subarrays", 2762, "M", ["R"]],
+    ["Longest Subarray of 1's After Deleting One Element", 1493, "M", ["R"]],
   ],
   ll: [
-    ["Reverse Linked List", 206, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "C"]],
-    ["Merge Two Sorted Lists", 21, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S"]],
+    ["Reverse Linked List", 206, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
+    ["Merge Two Sorted Lists", 21, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Linked List Cycle", 141, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Linked List Cycle II", 142, "M", ["O", "D"]],
     ["Middle of the Linked List", 876, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Remove Nth Node From End of List", 19, "M", ["O", "I", "A", "D", "T", "F", "B"]],
     ["Palindrome Linked List", 234, "E", ["O", "I", "A", "D", "T", "F"]],
-    ["Intersection of Two Linked Lists", 160, "E", ["O", "I", "B"]],
+    ["Intersection of Two Linked Lists", 160, "E", ["O", "I"]],
     ["Add Two Numbers", 2, "M", ["O", "D", "T", "B"]],
     ["Copy List with Random Pointer", 138, "M", ["O", "D", "B"]],
     ["Merge k Sorted Lists", 23, "H", ["O", "D"]],
@@ -181,7 +182,7 @@ const P = {
     ["Remove Duplicates from Sorted List", 83, "E", ["I", "A"]],
     ["Rotate List", 61, "M", ["O", "D"]],
     ["Sort List", 148, "M", ["O", "D", "T"]],
-    ["LRU Cache", 146, "M", ["B", "R", "O", "D"]],
+    ["LRU Cache", 146, "M", ["B", "R"]],
     ["LFU Cache", 460, "H", ["B"]],
   ],
   stack: [
@@ -194,13 +195,13 @@ const P = {
     ["Next Greater Element II", 503, "M", ["O", "D"]],
     ["Largest Rectangle in Histogram", 84, "H", ["O"]],
     ["Evaluate Reverse Polish Notation", 150, "M", ["O", "I"]],
-    ["Remove All Adjacent Duplicates In String", 1047, "E", ["I", "A"]],
+    ["Remove All Adjacent Duplicates In String", 1047, "E", ["I", "A", "R"]],
     ["Basic Calculator II", 227, "M", ["O", "D"]],
     ["Asteroid Collision", 735, "M", ["O", "D"]],
     ["Decode String", 394, "M", ["O", "D"]],
   ],
   bs: [
-    ["Binary Search", 704, "E", ["O", "I", "A", "D", "T", "F", "B", "S"]],
+    ["Binary Search", 704, "E", ["O", "I", "A", "D", "T", "F", "B"]],
     ["Search in Rotated Sorted Array", 33, "M", ["O", "I", "D", "B"]],
     ["Find Minimum in Rotated Sorted Array", 153, "M", ["O", "D", "B"]],
     ["Find Peak Element", 162, "M", ["O", "D"]],
@@ -214,9 +215,9 @@ const P = {
     ["Count Negative Numbers in a Sorted Matrix", 1351, "E", ["I", "F"]],
   ],
   trees: [
-    ["Maximum Depth of Binary Tree", 104, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S"]],
+    ["Maximum Depth of Binary Tree", 104, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Minimum Depth of Binary Tree", 111, "E", ["O", "I", "A", "D", "T", "F"]],
-    ["Invert Binary Tree", 226, "E", ["O", "I", "A", "D", "T", "F", "B", "S"]],
+    ["Invert Binary Tree", 226, "E", ["O", "I", "A", "D", "T", "F", "B"]],
     ["Same Tree", 100, "E", ["O", "I", "A", "D", "T", "F", "B"]],
     ["Symmetric Tree", 101, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Path Sum", 112, "E", ["O", "I", "A", "D", "T", "F"]],
@@ -226,7 +227,7 @@ const P = {
     ["Binary Tree Inorder Traversal", 94, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Binary Tree Preorder Traversal", 144, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Binary Tree Postorder Traversal", 145, "E", ["O", "I", "A", "D", "T", "F"]],
-    ["Binary Tree Level Order Traversal", 102, "M", ["O", "I", "A", "D", "T", "F", "B", "R", "S"]],
+    ["Binary Tree Level Order Traversal", 102, "M", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Binary Tree Zigzag Level Order Traversal", 103, "M", ["O", "D"]],
     ["Binary Tree Right Side View", 199, "M", ["O", "A", "D", "B", "R"]],
     ["Lowest Common Ancestor of a Binary Search Tree", 235, "M", ["O", "I", "A", "D", "T", "F", "B"]],
@@ -246,9 +247,11 @@ const P = {
     ["Subtree of Another Tree", 572, "E", ["B"]],
     ["Convert Sorted List to Binary Search Tree", 109, "M", ["R"]],
     ["Sum Root to Leaf Numbers", 129, "M", ["R"]],
+    ["Find Leaves of Binary Tree", 366, "M", ["R"]],
+    ["Convert Binary Search Tree to Sorted Doubly Linked List", 426, "M", ["R"]],
   ],
   graphs: [
-    ["Number of Islands", 200, "M", ["O", "A", "D", "T", "B", "R", "S"]],
+    ["Number of Islands", 200, "M", ["O", "A", "D", "T", "B", "R"]],
     ["Flood Fill", 733, "E", ["I", "A"]],
     ["Max Area of Island", 695, "M", ["O", "D", "T", "B"]],
     ["Rotting Oranges", 994, "M", ["O", "A", "D", "T", "B", "R"]],
@@ -262,32 +265,35 @@ const P = {
     ["Keys and Rooms", 841, "M", ["I", "D"]],
     ["Network Delay Time", 743, "M", ["S"]],
     ["Number of Distinct Islands", 694, "M", ["R"]],
+    ["Minimum Time to Visit a Cell In a Grid", 2577, "H", ["R"]],
   ],
   trie: [
     ["Implement Trie", 208, "M", ["S", "C", "B"]],
     ["Design Add and Search Words", 211, "M", ["S", "C", "B"]],
     ["Replace Words", 648, "M", ["S", "C"]],
     ["Word Search II", 212, "H", ["B"]],
+    ["Search Suggestions System", 1268, "M", ["R"]],
   ],
   uf: [
     ["Number of Provinces", 547, "M", ["S"]],
     ["Redundant Connection", 684, "M", ["S", "B"]],
     ["Accounts Merge", 721, "M", ["S"]],
     ["Word Ladder", 127, "H", ["B"]],
+    ["Word Ladder II", 126, "H", ["R"]],
   ],
   dp: [
-    ["Climbing Stairs", 70, "E", ["O", "I", "A", "D", "T", "F", "B", "R", "S"]],
+    ["Climbing Stairs", 70, "E", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["Min Cost Climbing Stairs", 746, "E", ["I", "A"]],
     ["Fibonacci Number", 509, "E", ["I", "A"]],
     ["House Robber", 198, "M", ["O", "I", "A", "D", "T", "F", "B", "R"]],
     ["House Robber II", 213, "M", ["O", "D"]],
-    ["Jump Game", 55, "M", ["O", "D", "T", "C"]],
+    ["Jump Game", 55, "M", ["O", "D", "T"]],
     ["Jump Game II", 45, "M", ["O", "D"]],
     ["Coin Change", 322, "M", ["O", "A", "D", "T", "B", "R"]],
     ["Coin Change II", 518, "M", ["O", "D"]],
     ["Unique Paths", 62, "M", ["O", "A", "D"]],
     ["Unique Paths II", 63, "M", ["O"]],
-    ["Minimum Path Sum", 64, "M", ["O", "D", "C"]],
+    ["Minimum Path Sum", 64, "M", ["O", "D"]],
     ["Longest Increasing Subsequence", 300, "M", ["O", "D", "T", "B", "R"]],
     ["Word Break", 139, "M", ["O", "D", "T", "R"]],
     ["Decode Ways", 91, "M", ["O", "T"]],
@@ -298,9 +304,10 @@ const P = {
     ["Triangle", 120, "M", ["S", "C", "L"]],
     ["Maximal Square", 221, "M", ["C"]],
     ["Edit Distance", 72, "H", ["B"]],
+    ["Regular Expression Matching", 10, "H", ["B"]],
   ],
   bt: [
-    ["Subsets", 78, "M", ["O", "D", "B"]],
+    ["Subsets", 78, "M", ["O", "D", "B", "R"]],
     ["Subsets II", 90, "M", ["O", "B"]],
     ["Permutations", 46, "M", ["O", "D", "T", "B", "R"]],
     ["Permutations II", 47, "M", ["O"]],
@@ -309,17 +316,18 @@ const P = {
     ["Combination Sum II", 40, "M", ["O"]],
     ["Letter Combinations of a Phone Number", 17, "M", ["O", "A", "D"]],
     ["Word Search", 79, "M", ["O", "D", "B", "R"]],
-    ["Palindrome Partitioning", 131, "M", ["O", "C"]],
+    ["Palindrome Partitioning", 131, "M", ["O"]],
   ],
   heap: [
     ["Kth Largest Element in an Array", 215, "M", ["O", "D", "T", "B"]],
-    ["K Closest Points to Origin", 973, "M", ["O", "D", "B"]],
+    ["K Closest Points to Origin", 973, "M", ["O", "D", "B", "R"]],
     ["Task Scheduler", 621, "M", ["O", "T"]],
     ["Reorganize String", 767, "M", ["O", "D"]],
     ["Find Median from Data Stream", 295, "H", ["O"]],
     ["Kth Largest Element in a Stream", 703, "E", ["I", "F", "B"]],
     ["Last Stone Weight", 1046, "E", ["I", "F", "B"]],
     ["Top K Frequent Words", 692, "M", ["O", "D"]],
+    ["Minimum Difference in Sums After Removal of Elements", 2163, "H", ["R"]],
   ],
   sort: [
     ["Bubble Sort — Write from Scratch", 0, "E", ["O", "I", "A", "D", "T", "F"]],
@@ -332,7 +340,7 @@ const P = {
     ["Sort Array by Parity", 905, "E", ["I", "A"]],
   ],
   bits: [
-    ["Single Number", 136, "E", ["O", "I", "A", "D", "T", "F", "C"]],
+    ["Single Number", 136, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Single Number II", 137, "M", ["O"]],
     ["Number of 1 Bits", 191, "E", ["I", "A"]],
     ["Counting Bits", 338, "E", ["I", "A"]],
@@ -342,7 +350,7 @@ const P = {
     ["Missing Number", 268, "E", ["O", "I", "A", "D", "T", "F"]],
   ],
   math: [
-    ["Palindrome Number", 9, "E", ["O", "I", "A", "D", "T", "F", "S"]],
+    ["Palindrome Number", 9, "E", ["O", "I", "A", "D", "T", "F"]],
     ["Reverse Integer", 7, "M", ["O", "I", "A", "D", "T", "F"]],
     ["Powx n", 50, "M", ["O", "D"]],
     ["Factorial Trailing Zeroes", 172, "M", ["O", "I"]],
@@ -566,7 +574,7 @@ export default function DSATracker() {
             return !search || name.toLowerCase().includes(search.toLowerCase());
           });
 
-          if (!visible.length) return null;
+          if (!visible.length && search) return null;
 
           const catTotal = companyProbs.length;
           const catDone = companyProbs.filter(({ key }) => checked[key]).length;
@@ -583,10 +591,12 @@ export default function DSATracker() {
                 border: "1px solid #e2e8f0",
                 overflow: "hidden",
                 boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+                opacity: catTotal === 0 ? 0.6 : 1,
               }}
             >
               <button
                 onClick={() => setExp((e) => ({ ...e, [cat.id]: !e[cat.id] }))}
+                disabled={catTotal === 0}
                 style={{
                   width: "100%",
                   padding: "12px 16px",
@@ -595,7 +605,7 @@ export default function DSATracker() {
                   gap: 12,
                   background: "none",
                   border: "none",
-                  cursor: "pointer",
+                  cursor: catTotal === 0 ? "default" : "pointer",
                   textAlign: "left",
                 }}
               >
@@ -632,7 +642,9 @@ export default function DSATracker() {
                       {cat.p}
                     </span>
                   </div>
-                  <div style={{ fontSize: 11, color: "#94a3b8" }}>{cat.n}</div>
+                  <div style={{ fontSize: 11, color: "#94a3b8" }}>
+                    {catTotal === 0 ? "No verified problems for this company." : cat.n}
+                  </div>
                 </div>
                 <div
                   style={{
@@ -647,7 +659,7 @@ export default function DSATracker() {
                       style={{
                         fontSize: 12,
                         fontWeight: 600,
-                        color: catPct === 100 ? "#10b981" : "#475569",
+                        color: catPct === 100 && catTotal > 0 ? "#10b981" : "#475569",
                       }}
                     >
                       {catDone}/{catTotal}
@@ -673,12 +685,12 @@ export default function DSATracker() {
                     </div>
                   </div>
                   <span style={{ color: "#94a3b8", fontSize: 10, width: 12 }}>
-                    {isOpen ? "▲" : "▼"}
+                    {catTotal === 0 ? "−" : isOpen ? "▲" : "▼"}
                   </span>
                 </div>
               </button>
 
-              {isOpen && (
+              {isOpen && catTotal > 0 && (
                 <div style={{ borderTop: "1px solid #f1f5f9" }}>
                   {visible.map(({ prob: [name, lc, diff, cos], key }) => {
                     const isDone = !!checked[key];
