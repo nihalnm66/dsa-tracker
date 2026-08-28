@@ -547,7 +547,6 @@ export default function DSATracker() {
             key: `${cat.id}_${i}`,
           }));
 
-          // Filter problems based on company selection and search keyword
           const visible = indexed.filter(({ prob: [name, , , cos] }) => {
             const coOk = filter === "ALL" || cos.includes(filter);
             const srOk =
@@ -555,7 +554,9 @@ export default function DSATracker() {
             return coOk && srOk;
           });
 
-          // Dynamic category counts that adapt to the selected company filter
+          // Hide categories completely if they have no matching problems for the selected filter/search
+          if (!visible.length) return null;
+
           const categoryPool = filter === "ALL" 
             ? indexed 
             : indexed.filter(({ prob: [,, , cos] }) => cos.includes(filter));
@@ -674,155 +675,149 @@ export default function DSATracker() {
               {/* Problem rows */}
               {isOpen && (
                 <div style={{ borderTop: "1px solid #f1f5f9" }}>
-                  {visible.length === 0 ? (
-                    <div style={{ padding: "12px 16px", fontSize: 12, color: "#94a3b8", fontStyle: "italic" }}>
-                      No problems match this filter in this category.
-                    </div>
-                  ) : (
-                    visible.map(({ prob: [name, lc, diff, cos], key }) => {
-                      const isDone = !!checked[key];
-                      return (
+                  {visible.map(({ prob: [name, lc, diff, cos], key }) => {
+                    const isDone = !!checked[key];
+                    return (
+                      <div
+                        key={key}
+                        onClick={() => toggle(key)}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 10,
+                          padding: "9px 16px",
+                          cursor: "pointer",
+                          borderBottom: "1px solid #f8fafc",
+                          background: isDone ? "#f0fdf4" : "white",
+                          transition: "background 0.1s",
+                        }}
+                      >
+                        {/* Checkbox */}
                         <div
-                          key={key}
-                          onClick={() => toggle(key)}
+                          style={{
+                            width: 20,
+                            height: 20,
+                            borderRadius: 5,
+                            border: `2px solid ${
+                              isDone ? "#10b981" : "#d1d5db"
+                            }`,
+                            background: isDone ? "#10b981" : "white",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                            transition: "all 0.15s",
+                          }}
+                        >
+                          {isDone && (
+                            <span
+                              style={{
+                                color: "white",
+                                fontSize: 11,
+                                fontWeight: 800,
+                                lineHeight: 1,
+                              }}
+                            >
+                              ✓
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Name + company tags */}
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div
+                            style={{
+                              fontSize: 13,
+                              fontWeight: 500,
+                              color: isDone ? "#9ca3af" : "#1e293b",
+                              textDecoration: isDone ? "line-through" : "none",
+                            }}
+                          >
+                            {lc > 0 && (
+                              <span
+                                style={{
+                                  color: "#94a3b8",
+                                  fontSize: 11,
+                                  marginRight: 4,
+                                }}
+                              >
+                                #{lc}
+                              </span>
+                            )}
+                            {name}
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              gap: 3,
+                              flexWrap: "wrap",
+                              marginTop: 4,
+                            }}
+                          >
+                            {cos.map((co) => (
+                              <span
+                                key={co}
+                                style={{
+                                  fontSize: 9,
+                                  padding: "1px 5px",
+                                  borderRadius: 4,
+                                  fontWeight: 700,
+                                  background: CO_CLR[co].background,
+                                  color: CO_CLR[co].color,
+                                }}
+                              >
+                                {co === "T" ? "T.Reuters" : CO[co]}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Difficulty + LC link */}
+                        <div
                           style={{
                             display: "flex",
                             alignItems: "center",
-                            gap: 10,
-                            padding: "9px 16px",
-                            cursor: "pointer",
-                            borderBottom: "1px solid #f8fafc",
-                            background: isDone ? "#f0fdf4" : "white",
-                            transition: "background 0.1s",
+                            gap: 6,
+                            flexShrink: 0,
                           }}
                         >
-                          {/* Checkbox */}
-                          <div
+                          <span
                             style={{
-                              width: 20,
-                              height: 20,
-                              borderRadius: 5,
-                              border: `2px solid ${
-                                isDone ? "#10b981" : "#d1d5db"
-                              }`,
-                              background: isDone ? "#10b981" : "white",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              flexShrink: 0,
-                              transition: "all 0.15s",
+                              fontSize: 11,
+                              padding: "2px 8px",
+                              borderRadius: 99,
+                              fontWeight: 600,
+                              background: DIFF[diff].background,
+                              color: DIFF[diff].color,
                             }}
                           >
-                            {isDone && (
-                              <span
-                                style={{
-                                  color: "white",
-                                  fontSize: 11,
-                                  fontWeight: 800,
-                                  lineHeight: 1,
-                                }}
-                              >
-                                ✓
-                              </span>
-                            )}
-                          </div>
-
-                          {/* Name + company tags */}
-                          <div style={{ flex: 1, minWidth: 0 }}>
-                            <div
+                            {DIFF[diff].label}
+                          </span>
+                          {lc > 0 && (
+                            <a
+                              href={`https://leetcode.com/problems/${mkSlug(
+                                name
+                              )}/`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
                               style={{
-                                fontSize: 13,
-                                fontWeight: 500,
-                                color: isDone ? "#9ca3af" : "#1e293b",
-                                textDecoration: isDone ? "line-through" : "none",
+                                fontSize: 10,
+                                color: "#3b82f6",
+                                padding: "2px 6px",
+                                borderRadius: 4,
+                                border: "1px solid #bfdbfe",
+                                textDecoration: "none",
+                                fontWeight: 700,
                               }}
                             >
-                              {lc > 0 && (
-                                <span
-                                  style={{
-                                    color: "#94a3b8",
-                                    fontSize: 11,
-                                    marginRight: 4,
-                                  }}
-                                >
-                                  #{lc}
-                                </span>
-                              )}
-                              {name}
-                            </div>
-                            <div
-                              style={{
-                                display: "flex",
-                                gap: 3,
-                                flexWrap: "wrap",
-                                marginTop: 4,
-                              }}
-                            >
-                              {cos.map((co) => (
-                                <span
-                                  key={co}
-                                  style={{
-                                    fontSize: 9,
-                                    padding: "1px 5px",
-                                    borderRadius: 4,
-                                    fontWeight: 700,
-                                    background: CO_CLR[co].background,
-                                    color: CO_CLR[co].color,
-                                  }}
-                                >
-                                  {co === "T" ? "T.Reuters" : CO[co]}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Difficulty + LC link */}
-                          <div
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: 6,
-                              flexShrink: 0,
-                            }}
-                          >
-                            <span
-                              style={{
-                                fontSize: 11,
-                                padding: "2px 8px",
-                                borderRadius: 99,
-                                fontWeight: 600,
-                                background: DIFF[diff].background,
-                                color: DIFF[diff].color,
-                              }}
-                            >
-                              {DIFF[diff].label}
-                            </span>
-                            {lc > 0 && (
-                              <a
-                                href={`https://leetcode.com/problems/${mkSlug(
-                                  name
-                                )}/`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={(e) => e.stopPropagation()}
-                                style={{
-                                  fontSize: 10,
-                                  color: "#3b82f6",
-                                  padding: "2px 6px",
-                                  borderRadius: 4,
-                                  border: "1px solid #bfdbfe",
-                                  textDecoration: "none",
-                                  fontWeight: 700,
-                                }}
-                              >
-                                LC ↗
-                              </a>
-                            )}
-                          </div>
+                              LC ↗
+                            </a>
+                          )}
                         </div>
-                      );
-                    })
-                  )}
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
